@@ -11,13 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Navbar Scroll Effect (Glassmorphism enhancement)
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 10) {
-            navbar.classList.add('shadow-sm');
-        } else {
-            navbar.classList.remove('shadow-sm');
-        }
-    });
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-sm');
+            } else {
+                navbar.classList.remove('shadow-sm');
+            }
+        });
+    }
 
     // WhatsApp Contact Form Integration
     const contactForm = document.getElementById('contact-form');
@@ -25,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
+            const name = document.getElementById('name')?.value ?? '';
+            const email = document.getElementById('email')?.value ?? '';
+            const subject = document.getElementById('subject')?.value ?? '';
+            const message = document.getElementById('message')?.value ?? '';
 
             // Format message for WhatsApp
             const text = `*New Inquiry from Website*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Subject:* ${subject}%0A*Message:* ${message}`;
