@@ -1,5 +1,5 @@
 [build]
-  publish = "d:/d storage/easywayinstitute"
+  publish = "."
   command = "echo 'No build command needed for static site'"
 
 [build.environment]
