@@ -1,3 +1,32 @@
+(() => {
+    const existing = document.getElementById('page-loader');
+    if (existing) return;
+
+    const loader = document.createElement('div');
+    loader.id = 'page-loader';
+    loader.innerHTML = `
+        <div class="ew-loader-inner">
+            <div class="ew-spinner" aria-label="Loading"></div>
+            <div class="ew-loader-bar" aria-hidden="true"></div>
+        </div>
+    `.trim();
+
+    document.body.appendChild(loader);
+
+    const hide = () => {
+        const el = document.getElementById('page-loader');
+        if (!el) return;
+        el.classList.add('ew-hidden');
+        window.setTimeout(() => el.remove(), 500);
+    };
+
+    if (document.readyState === 'complete') {
+        hide();
+    } else {
+        window.addEventListener('load', hide, { once: true });
+    }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const btn = document.getElementById('mobile-menu-btn');
@@ -28,12 +57,20 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
 
             const name = document.getElementById('name')?.value ?? '';
-            const email = document.getElementById('email')?.value ?? '';
-            const subject = document.getElementById('subject')?.value ?? '';
+            const parentName = document.getElementById('parent_name')?.value ?? '';
+            const contact = (document.getElementById('contact')?.value ?? document.getElementById('phone')?.value) ?? '';
+            const desiredCourse = document.getElementById('desired_course')?.value ?? '';
             const message = document.getElementById('message')?.value ?? '';
 
             // Format message for WhatsApp
-            const text = `*New Inquiry from Website*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Subject:* ${subject}%0A*Message:* ${message}`;
+            const lines = ['*New Inquiry from Website*'];
+            if (name) lines.push(`*Name:* ${name}`);
+            if (parentName) lines.push(`*Parent\'s Name:* ${parentName}`);
+            if (contact) lines.push(`*Contact:* ${contact}`);
+            if (desiredCourse) lines.push(`*Desired Course / Query:* ${desiredCourse}`);
+            if (message) lines.push(`*Message:* ${message}`);
+
+            const text = encodeURIComponent(lines.join('\n'));
             const phoneNumber = '9779767463434';
 
             // Open WhatsApp
@@ -62,11 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 courseCards.forEach(card => {
                     const category = card.getAttribute('data-category');
                     if (filterValue === 'all' || category === filterValue) {
-                        card.style.display = 'flex'; // Use flex to maintain layout
-                        setTimeout(() => {
+                        card.style.display = '';
+                        requestAnimationFrame(() => {
                             card.style.opacity = '1';
                             card.style.transform = 'scale(1)';
-                        }, 10);
+                        });
                     } else {
                         card.style.opacity = '0';
                         card.style.transform = 'scale(0.95)';
@@ -77,5 +114,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         });
+    }
+
+    const counters = document.querySelectorAll('.counter');
+    if (counters.length > 0 && 'IntersectionObserver' in window) {
+        const animateCounter = (el) => {
+            const target = Number(el.dataset.target ?? '0');
+            const suffix = el.dataset.suffix ?? '';
+            const durationMs = 1500;
+
+            const start = performance.now();
+            const step = (now) => {
+                const progress = Math.min((now - start) / durationMs, 1);
+                const value = Math.round(target * progress);
+                el.textContent = `${value}${suffix}`;
+
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                }
+            };
+
+            requestAnimationFrame(step);
+        };
+
+        const io = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                if (el.dataset.animated === 'true') {
+                    observer.unobserve(el);
+                    return;
+                }
+                el.dataset.animated = 'true';
+                animateCounter(el);
+                observer.unobserve(el);
+            });
+        }, { threshold: 0.4 });
+
+        counters.forEach(el => io.observe(el));
     }
 });
