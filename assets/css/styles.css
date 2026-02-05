@@ -26,7 +26,6 @@ body {
     background: #aaa;
 }
 
-/* Page Loader Overlay Styles */
 #page-loader {
     position: fixed;
     inset: 0;
