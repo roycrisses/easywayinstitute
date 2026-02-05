@@ -1,0 +1,131 @@
+[build]
+  publish = "d:/d storage/easywayinstitute"
+  command = "echo 'No build command needed for static site'"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/courses"
+  to = "/pages/courses.html"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/pages/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/pages/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog"
+  to = "/pages/blog.html"
+  status = 301
+
+[[redirects]]
+  from = "/news"
+  to = "/pages/news.html"
+  status = 301
+
+[[redirects]]
+  from = "/gallery"
+  to = "/pages/gallery.html"
+  status = 301
+
+[[redirects]]
+  from = "/course-details"
+  to = "/pages/course-details.html"
+  status = 301
+
+[[redirects]]
+  from = "/course-japanese"
+  to = "/pages/course-japanese.html"
+  status = 301
+
+[[redirects]]
+  from = "/course-korean"
+  to = "/pages/course-korean.html"
+  status = 301
+
+[[redirects]]
+  from = "/course-computer"
+  to = "/pages/course-computer.html"
+  status = 301
+
+[[redirects]]
+  from = "/course-tuition"
+  to = "/pages/course-tuition.html"
+  status = 301
+
+[[redirects]]
+  from = "/course-loksewa"
+  to = "/pages/course-loksewa.html"
+  status = 301
+
+[context.production.environment]
+  HUGO_ENV = "production"
+
+[context.deploy-preview.environment]
+  HUGO_ENV = "development"
