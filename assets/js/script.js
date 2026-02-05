@@ -1,4 +1,7 @@
 (() => {
+    const loaderKey = 'easyway_loader_shown';
+    if (sessionStorage.getItem(loaderKey) === '1') return;
+
     const existing = document.getElementById('page-loader');
     if (existing) return;
 
@@ -12,6 +15,8 @@
     `.trim();
 
     document.body.appendChild(loader);
+
+    sessionStorage.setItem(loaderKey, '1');
 
     const hide = () => {
         const el = document.getElementById('page-loader');

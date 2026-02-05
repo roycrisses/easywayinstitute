@@ -4,18 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Courses – Easy Way Institute</title>
-    <meta name="description"
-        content="Explore our courses: Japanese/Korean Language, IT Training, Academic Tuition, and PSC Preparation in Mahendranagar.">
+    <title>Basic & Diploma Computer – Easy Way Institute</title>
+    <meta name="description" content="Basic & Diploma Computer training at Easy Way Institute.">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&family=DM+Serif+Display&display=swap"
         rel="stylesheet">
 
-    <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -27,10 +24,10 @@
                         serif: ['DM Serif Display', 'serif'],
                     },
                     colors: {
-                        primary: '#0099EE', /* Easyway Sky */
-                        accent: '#EC7900',  /* Easyway Orange */
-                        dark: '#050505',    /* Cinematic Tech Black */
-                        text: '#707070',    /* Text Gray */
+                        primary: '#0099EE',
+                        accent: '#EC7900',
+                        dark: '#050505',
+                        text: '#707070',
                         light: '#F8F9FA',
                     },
                     container: {
@@ -47,7 +44,6 @@
 
 <body class="bg-white text-text font-sans antialiased selection:bg-primary selection:text-white">
 
-    <!-- Top Bar -->
     <div class="bg-primary text-white py-2 text-sm hidden md:block">
         <div class="container flex justify-between items-center">
             <div class="flex space-x-6">
@@ -79,24 +75,21 @@
         </div>
     </div>
 
-    <!-- Sticky Header -->
     <nav id="navbar" class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
         <div class="container py-4 flex justify-between items-center">
-            <!-- Logo -->
             <a href="../index.html" class="block w-48 transition hover:opacity-90">
                 <img src="../assets/img/logo.png" alt="EasyWay Institute Logo" width="436" height="129"
                     class="w-full h-auto">
             </a>
 
-            <!-- Desktop Menu -->
             <div class="hidden lg:flex items-center space-x-8">
                 <a href="../index.html"
                     class="text-dark hover:text-accent font-medium text-sm uppercase tracking-wide transition">HOME</a>
                 <a href="about.html"
                     class="text-dark hover:text-accent font-medium text-sm uppercase tracking-wide transition">ABOUT
                     US</a>
-                <a href="courses.html" class="text-accent font-semibold text-sm uppercase tracking-wide">COURSES</a>
-                <!-- Media Dropdown -->
+                <a href="courses.html"
+                    class="text-dark hover:text-accent font-medium text-sm uppercase tracking-wide transition">COURSES</a>
                 <div class="relative group">
                     <button
                         class="flex items-center text-dark hover:text-accent font-medium text-sm uppercase tracking-wide transition">
@@ -119,7 +112,6 @@
                     US</a>
             </div>
 
-            <!-- Mobile Menu Trigger -->
             <div class="flex items-center space-x-4 lg:hidden">
                 <button id="mobile-menu-btn"
                     class="text-primary p-2 border border-primary rounded hover:bg-primary hover:text-white transition">
@@ -131,194 +123,106 @@
             </div>
         </div>
 
-        <!-- Mobile Menu (Hidden) -->
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100">
             <div class="container py-4 space-y-3">
                 <a href="../index.html" class="block px-4 py-2 text-dark font-medium hover:text-accent">HOME</a>
                 <a href="about.html" class="block px-4 py-2 text-dark font-medium hover:text-accent">ABOUT US</a>
-                <a href="courses.html" class="block px-4 py-2 text-primary font-semibold bg-blue-50 rounded">COURSES</a>
+                <a href="courses.html" class="block px-4 py-2 text-dark font-medium hover:text-accent">COURSES</a>
                 <a href="contact.html" class="block px-4 py-2 text-dark font-medium hover:text-accent">CONTACT US</a>
             </div>
         </div>
     </nav>
 
-    <!-- Header Hero -->
-    <header class="bg-light py-16 text-center">
+    <header class="bg-light py-14">
         <div class="container">
-            <h1 class="text-3xl md:text-5xl font-heading font-bold text-primary mb-4">Our Courses</h1>
-            <p class="text-text max-w-2xl mx-auto">Providing quality training for language and careers.</p>
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+                <div>
+                    <p class="text-sm text-gray-500 mb-2"><a href="courses.html" class="hover:text-primary transition">Courses</a>
+                        <span class="mx-2">/</span> <span class="text-gray-700">Computer Training</span>
+                    </p>
+                    <h1 class="text-3xl md:text-5xl font-heading font-bold text-dark">Basic & Diploma Computer</h1>
+                    <p class="text-text mt-3 max-w-2xl">Practical computer skills for school, office, and career growth.</p>
+                </div>
+                <div class="flex gap-3">
+                    <a href="contact.html"
+                        class="inline-flex items-center justify-center px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-orange-600 transition">Enroll
+                        Now</a>
+                    <a href="courses.html"
+                        class="inline-flex items-center justify-center px-6 py-3 bg-white border border-gray-200 text-dark font-semibold rounded-lg hover:bg-gray-50 transition">Back
+                        to Courses</a>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Filter Buttons -->
-    <div class="container py-8 flex flex-wrap justify-center gap-4">
-        <button data-filter="all"
-            class="filter-btn px-6 py-2 rounded-full border border-gray-200 text-sm font-medium hover:bg-primary hover:text-white transition bg-primary text-white shadow-md">All
-            Courses</button>
-        <button data-filter="language"
-            class="filter-btn px-6 py-2 rounded-full border border-gray-200 text-sm font-medium hover:bg-primary hover:text-white transition">Language</button>
-        <button data-filter="it"
-            class="filter-btn px-6 py-2 rounded-full border border-gray-200 text-sm font-medium hover:bg-primary hover:text-white transition">IT
-            Skills</button>
-        <button data-filter="academic"
-            class="filter-btn px-6 py-2 rounded-full border border-gray-200 text-sm font-medium hover:bg-primary hover:text-white transition">Academic/Tuition</button>
-    </div>
+    <main class="container py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <section class="lg:col-span-2">
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                    <div class="h-64 md:h-80 bg-gray-100">
+                        <img src="../assets/img/course-3.jpg" alt="Computer Training" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-7">
+                        <h2 class="text-xl font-heading font-bold text-dark mb-3">Overview</h2>
+                        <p class="text-text leading-relaxed">Learn essential computer skills needed for academic and office environments. This course focuses on practical learning: MS Office, file management, internet use, email, online forms, typing, and basic troubleshooting.</p>
 
-    <!-- Course Grid -->
-    <div class="container py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Course 1 (Language) -->
-            <div class="course-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300"
-                data-category="language">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="../assets/img/course-2.jpg" alt="Korean Language"
-                        class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute top-4 right-4 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">
-                        Language</div>
-                </div>
+                        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="p-4 rounded-xl bg-light border border-gray-100">
+                                <p class="text-xs uppercase tracking-wider text-gray-500">Category</p>
+                                <p class="mt-1 font-semibold text-dark">IT Skills</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-light border border-gray-100">
+                                <p class="text-xs uppercase tracking-wider text-gray-500">Level</p>
+                                <p class="mt-1 font-semibold text-dark">Beginner to Professional</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-light border border-gray-100">
+                                <p class="text-xs uppercase tracking-wider text-gray-500">Duration</p>
+                                <p class="mt-1 font-semibold text-dark">1–3 months</p>
+                            </div>
+                        </div>
 
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-dark group-hover:text-primary transition mb-2 font-heading">
-                        Korean Language Class</h3>
-                    <p class="text-text text-sm mb-4 line-clamp-3">Master Korean for EPS-TOPIK with expert instructors.
-                        Intensive practice and mock tests included.</p>
-                    <div class="flex items-center justify-between gap-4">
-                        <a href="course-korean.html" class="text-primary hover:text-accent transition text-sm font-semibold">View Details</a>
-                        <a href="contact.html"
-                            class="inline-flex items-center justify-center px-5 py-2 bg-accent text-white font-semibold rounded hover:bg-orange-600 transition text-sm">Enroll
-                            Now</a>
+                        <div class="mt-10">
+                            <h2 class="text-xl font-heading font-bold text-dark mb-3">What you will learn</h2>
+                            <ul class="space-y-3 text-sm text-gray-700">
+                                <li class="flex items-start"><span class="mt-1 mr-3 w-2 h-2 rounded-full bg-accent"></span><span>Computer fundamentals and file management</span></li>
+                                <li class="flex items-start"><span class="mt-1 mr-3 w-2 h-2 rounded-full bg-accent"></span><span>MS Word, Excel, and PowerPoint (practical)</span></li>
+                                <li class="flex items-start"><span class="mt-1 mr-3 w-2 h-2 rounded-full bg-accent"></span><span>Internet, email, and online form submission</span></li>
+                                <li class="flex items-start"><span class="mt-1 mr-3 w-2 h-2 rounded-full bg-accent"></span><span>Typing and productivity shortcuts</span></li>
+                                <li class="flex items-start"><span class="mt-1 mr-3 w-2 h-2 rounded-full bg-accent"></span><span>Basic troubleshooting and safety practices</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-10">
+                            <h2 class="text-xl font-heading font-bold text-dark mb-3">Course features</h2>
+                            <ul class="space-y-3 text-sm text-gray-700">
+                                <li class="flex items-start"><span class="mt-1 mr-3 w-2 h-2 rounded-full bg-primary"></span><span>Hands-on lab practice</span></li>
+                                <li class="flex items-start"><span class="mt-1 mr-3 w-2 h-2 rounded-full bg-primary"></span><span>Assignments and practical exercises</span></li>
+                                <li class="flex items-start"><span class="mt-1 mr-3 w-2 h-2 rounded-full bg-primary"></span><span>Certificate after completion</span></li>
+                                <li class="flex items-start"><span class="mt-1 mr-3 w-2 h-2 rounded-full bg-primary"></span><span>Beginner-friendly teaching approach</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Course 2 (Language) -->
-            <div class="course-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300"
-                data-category="language">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="../assets/img/course-1.jpg" alt="Japanese Language"
-                        class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute top-4 right-4 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">
-                        Language</div>
-                </div>
-
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-dark group-hover:text-primary transition mb-2 font-heading">
-                        Japanese Language (JLPT/NAT)</h3>
-                    <p class="text-text text-sm mb-4 line-clamp-3">Comprehensive Japanese language training focusing on
-                        grammar, vocabulary, and conversation.</p>
-                    <div class="flex items-center justify-between gap-4">
-                        <a href="course-japanese.html" class="text-primary hover:text-accent transition text-sm font-semibold">View Details</a>
+            <aside class="lg:col-span-1">
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-7 sticky top-28">
+                    <h3 class="text-lg font-heading font-bold text-dark mb-4">Need help choosing?</h3>
+                    <p class="text-sm text-text leading-relaxed mb-6">Contact us and we will help you select the best course based on your goals.</p>
+                    <div class="space-y-3">
                         <a href="contact.html"
-                            class="inline-flex items-center justify-center px-5 py-2 bg-accent text-white font-semibold rounded hover:bg-orange-600 transition text-sm">Enroll
-                            Now</a>
+                            class="w-full inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-blue-600 transition">Contact
+                            Us</a>
+                        <a href="https://wa.me/9779767463434" target="_blank" rel="noopener"
+                            class="w-full inline-flex items-center justify-center px-6 py-3 bg-white border border-gray-200 text-dark font-semibold rounded-lg hover:bg-gray-50 transition">WhatsApp</a>
                     </div>
                 </div>
-            </div>
-
-            <!-- Course 3 (IT) -->
-            <div class="course-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300"
-                data-category="it">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="../assets/img/course-3.jpg" alt="Computer Training"
-                        class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute top-4 right-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                        IT Skills</div>
-                </div>
-
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-dark group-hover:text-primary transition mb-2 font-heading">
-                        Basic & Diploma Computer</h3>
-                    <p class="text-text text-sm mb-4 line-clamp-3">Learn essential computer skills including Office
-                        package, email, internet, and basic troubleshooting.</p>
-                    <div class="flex items-center justify-between gap-4">
-                        <a href="course-computer.html" class="text-primary hover:text-accent transition text-sm font-semibold">View Details</a>
-                        <a href="contact.html"
-                            class="inline-flex items-center justify-center px-5 py-2 bg-accent text-white font-semibold rounded hover:bg-orange-600 transition text-sm">Enroll
-                            Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Course 4 (Academic) -->
-            <div class="course-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300"
-                data-category="academic">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="../assets/img/course-4.jpg" alt="Tuition Classes"
-                        class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div
-                        class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                        Academic</div>
-                </div>
-
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-dark group-hover:text-primary transition mb-2 font-heading">
-                        Tuition (Major English/Math/Science)</h3>
-                    <p class="text-text text-sm mb-4 line-clamp-3">Specialized tuition for SEE and +2 students in major
-                        subjects by experienced teachers.</p>
-                    <div class="flex items-center justify-between gap-4">
-                        <a href="course-tuition.html" class="text-primary hover:text-accent transition text-sm font-semibold">View Details</a>
-                        <a href="contact.html"
-                            class="inline-flex items-center justify-center px-5 py-2 bg-accent text-white font-semibold rounded hover:bg-orange-600 transition text-sm">Enroll
-                            Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Course 5 (Academic/PSC) -->
-            <div class="course-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300"
-                data-category="academic">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="../assets/img/course-4.jpg" alt="Loksewa Preparation"
-                        class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div
-                        class="absolute top-4 right-4 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                        PSC Prep</div>
-                </div>
-
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-dark group-hover:text-primary transition mb-2 font-heading">
-                        Loksewa (PSC) Preparation</h3>
-                    <p class="text-text text-sm mb-4 line-clamp-3">Prepare for Kharidar, Subba, and Adhikrit levels with
-                        focused study materials and exams.</p>
-                    <div class="flex items-center justify-between gap-4">
-                        <a href="course-loksewa.html" class="text-primary hover:text-accent transition text-sm font-semibold">View Details</a>
-                        <a href="contact.html"
-                            class="inline-flex items-center justify-center px-5 py-2 bg-accent text-white font-semibold rounded hover:bg-orange-600 transition text-sm">Enroll
-                            Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Course 6 (Other) -->
-            <div class="course-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300"
-                data-category="it">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="../assets/img/course-3.jpg" alt="Graphic Design"
-                        class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute top-4 right-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                        IT Skills</div>
-                </div>
-
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-dark group-hover:text-primary transition mb-2 font-heading">
-                        Graphic Design</h3>
-                    <p class="text-text text-sm mb-4 line-clamp-3">Create stunning visuals using Photoshop, Illustrator,
-                        and InDesign. Build your portfolio.</p>
-                    <div class="flex items-center justify-between gap-4">
-                        <a href="course-graphic.html" class="text-primary hover:text-accent transition text-sm font-semibold">View Details</a>
-                        <a href="contact.html"
-                            class="inline-flex items-center justify-center px-5 py-2 bg-accent text-white font-semibold rounded hover:bg-orange-600 transition text-sm">Enroll
-                            Now</a>
-                    </div>
-                </div>
-            </div>
+            </aside>
         </div>
-    </div>
+    </main>
 
-    <!-- Footer -->
     <footer class="bg-white border-t border-gray-200 pt-16 pb-8">
         <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-            <!-- Brand -->
             <div>
                 <a href="../index.html" class="block mb-6">
                     <h2 class="text-2xl font-bold text-dark uppercase tracking-wider">Easy<span
@@ -328,7 +232,6 @@
                     Empowering learners with practical skills for a better future. Join us to shape your career with
                     expert guidance.
                 </p>
-                <!-- Socials -->
                 <div class="flex space-x-3">
                     <a href="https://www.facebook.com/easywayinstitutenepal"
                         class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 border border-primary/20 text-primary hover:bg-primary hover:text-white hover:scale-105 transition-all duration-300"><svg
@@ -347,7 +250,6 @@
                 </div>
             </div>
 
-            <!-- Quick Links -->
             <div>
                 <h4 class="text-dark font-semibold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
                 <ul class="space-y-3 text-sm text-gray-600">
@@ -358,7 +260,6 @@
                 </ul>
             </div>
 
-            <!-- Faculties -->
             <div>
                 <h4 class="text-dark font-semibold mb-6 uppercase tracking-wider text-sm">Our Faculties</h4>
                 <ul class="space-y-3 text-sm text-gray-600">
@@ -369,7 +270,6 @@
                 </ul>
             </div>
 
-            <!-- Contact -->
             <div>
                 <h4 class="text-dark font-semibold mb-6 uppercase tracking-wider text-sm">Get in Touch</h4>
                 <ul class="space-y-4 text-sm text-gray-600">
