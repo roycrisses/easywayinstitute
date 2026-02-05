@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog – Easy Way Institute</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&family=DM+Serif+Display&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'], heading: ['Inter', 'sans-serif'] },
+                    colors: { primary: '#0099EE', accent: '#EC7900', dark: '#050505', text: '#707070', light: '#F8F9FA' }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body class="bg-white text-text font-sans antialiased">
+    <nav class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
+        <div class="container py-4 flex justify-between items-center mx-auto px-4">
+            <a href="../index.html" class="block w-48"><img
+                    src="https://easyway.com.np/wp-content/uploads/2025/12/cropped-logo__1_-removebg-preview-e1765293775263.png"
+                    alt="Logo" class="w-full h-auto"></a>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="../index.html" class="text-dark hover:text-accent font-medium text-sm uppercase">HOME</a>
+                <a href="about.html" class="text-dark hover:text-accent font-medium text-sm uppercase">ABOUT US</a>
+                <a href="courses.html" class="text-dark hover:text-accent font-medium text-sm uppercase">COURSES</a>
+                <a href="contact.html" class="text-dark hover:text-accent font-medium text-sm uppercase">CONTACT US</a>
+            </div>
+            <a href="contact.html" class="lg:hidden text-primary font-bold">MENU</a>
+        </div>
+    </nav>
+    <header class="bg-light py-20 text-center">
+        <h1 class="text-4xl font-heading font-bold text-dark">Latest Blog</h1>
+        <p class="text-text mt-2">Updates and articles from Easy Way Institute.</p>
+    </header>
+    <main class="py-20 container mx-auto px-4 text-center">
+        <p class="text-gray-500 italic">Blog posts coming soon...</p>
+    </main>
+    <footer class="bg-dark text-white py-8 text-center">
+        <p>&copy; 2025 Easy Way Institute.</p>
+    </footer>
+</body>
+
+</html>
